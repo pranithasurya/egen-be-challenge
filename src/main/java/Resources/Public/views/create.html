@@ -1,0 +1,84 @@
+<form class="form-horizontal" role="form" ng-submit="createUser()">
+    <div class="form-group">
+        <label for="title" class="col-sm-2 control-label">FirstName</label>
+
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="firstname" placeholder="firstname" ng-model="user.firstname">
+        </div>
+    </div>
+        <div class="form-group">
+        <label for="title" class="col-sm-2 control-label">LastName</label>
+
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="lastname" placeholder="lastname" ng-model="user.lastname">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="title" class="col-sm-2 control-label">Email</label>
+
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="email" placeholder="email" ng-model="user.email">
+        </div>
+    </div>
+        <div class="form-group">
+        <label for="title" class="col-sm-2 control-label">Street</label>
+
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="street" placeholder="street" ng-model="user.address.street">
+        </div>
+    </div>
+        <div class="form-group">
+        <label for="title" class="col-sm-2 control-label">City</label>
+
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="city" placeholder="city" ng-model="user.address.city">
+        </div>
+    </div>
+            <div class="form-group">
+        <label for="title" class="col-sm-2 control-label">State</label>
+
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="state" placeholder="city" ng-model="user.address.state">
+        </div>
+    </div>
+            <div class="form-group">
+        <label for="title" class="col-sm-2 control-label">Country</label>
+
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="country" placeholder="country" ng-model="user.address.country">
+        </div>
+    </div>
+                <div class="form-group">
+        <label for="title" class="col-sm-2 control-label">zip</label>
+
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="zip" placeholder="zip" ng-model="user.address.zip">
+        </div>
+    </div>
+                    <div class="form-group">
+        <label for="title" class="col-sm-2 control-label">Company Name</label>
+
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="cname" placeholder="Company Name" ng-model="user.company.name">
+        </div>
+    </div>
+                    <div class="form-group">
+        <label for="title" class="col-sm-2 control-label">Company Website</label>
+
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="zip" placeholder="zip" ng-model="user.company.website">
+        </div>
+    </div>
+                        <div class="form-group">
+        <label for="title" class="col-sm-2 control-label">Profile Pic</label>
+
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="profilepic" placeholder="Profile Pic" ng-model="user.profilepic">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">New User</button>
+        </div>
+    </div>
+</form>

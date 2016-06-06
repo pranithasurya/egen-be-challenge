@@ -1,0 +1,103 @@
+<h2>All Users <a class="btn btn-primary pull-right" href="#/create"><i
+        class="icon-plus-sign icon-white"></i> New User</a></h2>
+
+<table class="table table-hover">
+    <tr>
+        <th>
+            #
+        </th>
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Date Created
+        </th>
+        <th>
+            Street
+        </th>
+        <th>
+            City
+        </th>
+        <th>
+            Zip
+        </th>
+        <th>
+            State
+        </th>
+        <th>
+            Country
+        </th>
+        <th>
+            Company Name
+        </th>
+        <th>
+            Company Website
+        </th>
+        <th>
+            Profile Pic
+        </th>
+        
+    </tr>
+    <tr  ng-repeat="user in users">
+        <td><button type="submit" data-ng-hide="editMode" data-ng-click="editMode = true; edit(user)" class="btn btn-default">Edit</button>
+            <button type="submit" data-ng-show="editMode" data-ng-click="editMode = false; save(user)" class="btn btn-default">Save</button>
+            <button type="submit" data-ng-show="editMode" data-ng-click="editMode = false; cancel(user)" class="btn btn-default">Cancel</button></td>
+        <td>     
+             <span data-ng-hide="editMode">{{user.firstname}}</span>
+            <input type="text" data-ng-show="editMode" data-ng-model="user.firstname" data-ng-required />
+        </td>
+        <td>
+             <span data-ng-hide="editMode">{{user.lastname}}</span>
+            <input type="text" data-ng-show="editMode" data-ng-model="user.lastname" data-ng-required />
+        </td>
+        <td>
+            <span data-ng-hide="editMode">{{user.email}}</span>
+            <input type="text" data-ng-show="editMode" data-ng-model="user.email" data-ng-required />
+        </td> 
+        
+        <td>
+            {{user.dateCreated}}
+        </td>
+         
+        <td>
+            <span data-ng-hide="editMode">{{user.address.street}}</span>
+            <input type="text" data-ng-show="editMode" data-ng-model="user.address.street" data-ng-required />
+        </td>  
+        <td>
+            <span data-ng-hide="editMode">{{user.address.city}}</span>
+            <input type="text" data-ng-show="editMode" data-ng-model="user.address.city" data-ng-required />
+        </td>  
+        <td>  
+            <span data-ng-hide="editMode"> {{user.address.zip}}</span>
+            <input type="text" data-ng-show="editMode" data-ng-model="user.address.zip" data-ng-required />
+        </td>  
+        <td>
+            <span data-ng-hide="editMode"> {{user.address.state}}</span>
+            <input type="text" data-ng-show="editMode" data-ng-model="user.address.state" data-ng-required />
+        </td>  
+        <td>
+            <span data-ng-hide="editMode"> {{user.address.country}}</span>
+            <input type="text" data-ng-show="editMode" data-ng-model="user.address.country" data-ng-required />
+        </td>  
+        <td>
+            <span data-ng-hide="editMode"> {{user.company.name}}</span>
+            <input type="text" data-ng-show="editMode" data-ng-model="user.company.name" data-ng-required />
+        </td>  
+        <td>
+            
+            <span data-ng-hide="editMode"> {{user.company.website}}</span>
+            <input type="text" data-ng-show="editMode" data-ng-model="user.company.website" data-ng-required />
+        </td>  
+        <td>           
+            <span data-ng-hide="editMode"> {{user.profilepic}}</span>
+            <input type="text" data-ng-show="editMode" data-ng-model="user.profilepic" data-ng-required />
+        </td>              
+              
+    </tr>
+</table>
