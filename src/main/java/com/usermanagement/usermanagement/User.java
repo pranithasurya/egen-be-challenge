@@ -27,9 +27,9 @@ public class User {
     private String firstname;
     private String lastname;
     private String email;
-    private Address address;
+    private Address address= new Address();
     private Date dateCreated= new Date();
-    private Company company;
+    private Company company=new Company();
     private String profilepic;
     
     public User()

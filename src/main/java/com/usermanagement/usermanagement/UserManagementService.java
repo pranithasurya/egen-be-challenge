@@ -27,9 +27,9 @@ public class UserManagementService {
     
     public void createNewUser(String body)
     {
-    	
+
     	User user = gson.fromJson(body, User.class);
-    	System.out.println(user.getFirstName());
+    	
     	
     	collection.insert(new BasicDBObject("firstname", user.getFirstName()).append("lastname", user.getLastName())
     					.append("email", user.getEmail())
